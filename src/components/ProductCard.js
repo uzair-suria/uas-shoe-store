@@ -13,17 +13,13 @@ const useStyles = makeStyles({
 	root: {
 		maxWidth: 345,
 	},
+	price: {
+		marginTop: 20,
+	},
 });
 
-const ProductCard = ({ productID }) => {
-	const shoe = {
-		name: 'Nike Air Force 1 GTX',
-		gender: 'male',
-		tagline: 'LEGENDARY STYLE, REFINED FOR WINTER',
-		description: `The radiance lives on in the Nike Air Force 1 ’07 GTX, the b-ball OG that puts a fresh spin on what you know best: crisp leather, bold colors and the perfect amount of flash to make you shine. This time it's clad in GORE-TEX technology.`,
-		price: 150,
-		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
-	};
+const ProductCard = ({ productId }) => {
+	const shoe = shoeData[productId];
 
 	const classes = useStyles();
 	return (
@@ -32,20 +28,31 @@ const ProductCard = ({ productID }) => {
 				<CardActionArea>
 					<CardMedia
 						component="img"
-						alt={productID}
+						alt={productId}
 						height="240"
 						src={
-							require(`../images/${shoeData[productID].gender}/${productID}/01.jpg`)
+							require(`../images/${shoeData[productId].gender}/${productId}/01.jpg`)
 								.default
 						}
 						title={shoe.tagline}
 					/>
 					<CardContent>
-						<Typography gutterBottom variant="h5" component="h2">
+						<Typography
+							gutterBottom
+							variant="h6"
+							component="h2"
+							color="textPrimary"
+						>
 							{shoe.name}
 						</Typography>
+						<Typography variant="body1" color="textSecondary" component="p">
+							{shoe.gender === 'male' ? `Men's` : `Women's`} Shoe
+						</Typography>
 						<Typography variant="body2" color="textSecondary" component="p">
-							{shoe.description}
+							{shoe.tagline}
+						</Typography>
+						<Typography align="right" className={classes.price}>
+							${shoe.price}
 						</Typography>
 					</CardContent>
 				</CardActionArea>

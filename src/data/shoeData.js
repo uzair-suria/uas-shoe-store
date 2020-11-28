@@ -6,6 +6,7 @@ export const shoeData = {
 		description: `The radiance lives on in the Nike Air Force 1 ’07 GTX, the b-ball OG that puts a fresh spin on what you know best: crisp leather, bold colors and the perfect amount of flash to make you shine. This time it's clad in GORE-TEX technology.`,
 		price: 150,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+		featured: true,
 	},
 	'air-jordan-4-retro': {
 		name: 'Air Jordan 4',
@@ -14,6 +15,7 @@ export const shoeData = {
 		description: `The Air Jordan 4 has been a revered silhouette since it first hit shelves in February 1989. That OG release featured 3 colorways—including this exact makeup, with a white base overlaid by tones of black and fire red. Now, for the first time since that ‘89 debut, the style is back in its full and original form. Familiar features include vintage Nike Air branding on the heel, as well as a throwback Nike Air hangtag and original packaging.`,
 		price: 200,
 		images: ['01', '02', '03', '04', '05', '06'],
+		featured: false,
 	},
 	'air-max-97': {
 		name: 'Nike Air Max 97',
@@ -22,6 +24,7 @@ export const shoeData = {
 		description: `The Nike Air Max 97 re-imagines an iconic running shoe with frightening Halloween colors and slimy detailing throughout. Max Air cushioning and a glow-in-the-dark outsole bring a '90s favorite into a bone-chilling new light.`,
 		price: 180,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+		featured: false,
 	},
 	'air-max-2090': {
 		name: 'Nike Air Max 2090',
@@ -30,6 +33,7 @@ export const shoeData = {
 		description: `Bring the past into the future with the Nike Air Max 2090, a bold look inspired by the DNA of the iconic Air Max 90. Max Air cushioning underfoot adds unparalleled comfort while metallic gold throughout the upper blends with timeless OG features for a refined, modernized look.`,
 		price: 150,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+		featured: false,
 	},
 	'air-vapormax-2020-flyknit': {
 		name: 'Nike Air VaporMax 2020 FK',
@@ -38,6 +42,7 @@ export const shoeData = {
 		description: `Designed with sustainability in mind, the Nike Air VaporMax 2020 Flyknit is made from at least 50% recycled content by weight. That’s a lot of trash! As part of Nike’s journey towards lowering our impact, we’re discovering new ways to put our waste to good use. By utilizing leftover materials, recycled polyester, recycled foam, and a Nike Air sole made from at least 75% recycled TPU, the VaporMax 2020 Flyknit marks the next step towards our ultimate goal of zero carbon and zero waste.`,
 		price: 220,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+		featured: true,
 	},
 	'air-vapor-max-plus': {
 		name: 'Nike Air VaporMax Plus',
@@ -46,6 +51,7 @@ export const shoeData = {
 		description: `The Nike Air VaporMax Plus looks to the past and propels you into the future. Nodding to the 1998 Air Max Plus with its floating cage, padded upper and heel logo, it adds revolutionary VaporMax Air technology to ramp up the comfort and create a modern look.`,
 		price: 200,
 		images: ['01', '02', '03', '04', '05', '06', '07'],
+		featured: false,
 	},
 	'air-zoom-pegasus-37-shield': {
 		name: 'Nike Air Zoom Pegasus 37 Shield',
@@ -67,6 +73,7 @@ export const shoeData = {
 			'11',
 			'12',
 		],
+		featured: false,
 	},
 	'air-zoom-pulse': {
 		name: 'Nike Air Zoom Pulse',
@@ -75,6 +82,7 @@ export const shoeData = {
 		description: `Built for and tested by nurses, the Nike Air Zoom Pulse combines cushioning and flexible traction for a comfortable, natural feel that lasts through long shifts on dry and slippery surfaces. The durable design is easy to clean, pull on and take off to keep you ready for the unexpected.`,
 		price: 120,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: true,
 	},
 	'air-zoom-spiridon-cage-2-se': {
 		name: 'Nike Air Zoom Spiridon Cage 2 SE',
@@ -83,6 +91,7 @@ export const shoeData = {
 		description: `First released in 2003, the Nike Air Zoom Spiridon Cage 2 SE is as relevant today as it was back then. Its OG design gets a refresh with luscious suedes and beautifully textured top-grain leather while open mesh adds an airy aesthetic. The result is an urban look that bridges heritage with modern.`,
 		price: 150,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'air-zoom-superrep-hiit-class': {
 		name: `Nike Air Zoom SuperRep`,
@@ -91,6 +100,7 @@ export const shoeData = {
 		description: `The Nike Air Zoom SuperRep is designed for circuit training, HIIT, short runs and other fast-paced exercise. Zoom Air cushioning in the forefoot combines with a wide, supportive heel to keep you moving and lifting comfortably.`,
 		price: 120,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'jordan-zoom-92': {
 		name: `Jordan Zoom '92`,
@@ -99,6 +109,7 @@ export const shoeData = {
 		description: `A nod to '90s basketball shoes, the Jordan Zoom '92 focuses on comfort while tapping into the irreverent spirit of that era's designs. A stretchy fit sleeve and underfoot cushioning offer a comfortable fit. '90s-inspired details give the shoe its retro flavor.`,
 		price: 150,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'manoa-mens-boot': {
 		name: `Nike Manoa`,
@@ -107,6 +118,7 @@ export const shoeData = {
 		description: `Built to tackle tough terrain or city streets, the Nike Manoa Men's Boot has a cushioned mid-sole and a solid rubber outsole inspired by the trail for superb traction over any surface.`,
 		price: 90,
 		images: ['01', '02', '03', '04', '05', '06'],
+		featured: false,
 	},
 	'air-force-1-07': {
 		name: `Nike Air Force 1 '07`,
@@ -115,6 +127,7 @@ export const shoeData = {
 		description: `The radiance lives on in the Nike Air Force 1 ’07, the b-ball OG that puts a fresh spin on what you know best: crisp leather in an all-white colorway for a statement look on and off the court.`,
 		price: 90,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'air-max-90-premium': {
 		name: `Nike Air Max 90 Premium`,
@@ -123,6 +136,7 @@ export const shoeData = {
 		description: `Nothing as fly, nothing as comfortable, nothing as proven—the Nike Air Max 90 Premium stays true to its OG roots with the iconic Waffle outsole, stitched overlays and classic TPU accents. Fresh colors give a modern look while Max Air cushioning adds comfort to your journey.`,
 		price: 130,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'air-max-90-twist': {
 		name: `Nike Air Max 90 Twist`,
@@ -131,6 +145,7 @@ export const shoeData = {
 		description: `The Nike Air Max 90 stays true to its OG running roots with the iconic Waffle sole, stitched overlays and classic TPU plates. Retro colors celebrate the first generation while Max Air cushioning adds comfort to your journey.`,
 		price: 120,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'air-max-2090-women': {
 		name: `Nike Air Max 2090`,
@@ -139,6 +154,7 @@ export const shoeData = {
 		description: `Bring the past into the future with the Nike Air Max 2090, a bold look inspired by the iconic Air Max 90. Brand-new Air cushioning underfoot adds unparalleled comfort while transparent mesh and vibrantly colored textiles on the upper blend with timeless OG features for an edgy, modernized look.`,
 		price: 150,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'air-vapormax-flyknit-3': {
 		name: `Nike Air VaporMax Flyknit 3`,
@@ -147,6 +163,7 @@ export const shoeData = {
 		description: `Be bouncy and buoyant in the Nike Air VaporMax Flyknit 3. A high-fashion-inspired upper features flowing lines of breathable, stretchable Flyknit construction. Revolutionary VaporMax Air technology keeps a spring in your step with toe-to-heel cushioning.`,
 		price: 102.97,
 		images: ['01', '02', '03', '04', '05', '06'],
+		featured: false,
 	},
 	'air-vapormax-plus': {
 		name: `Nike Air VaporMax Plus`,
@@ -155,6 +172,7 @@ export const shoeData = {
 		description: `The Nike Air VaporMax Plus delivers a fade of bright colors and vibrant hues for a fresh look. The shoe design nods to the '98 Air Max Plus with its floating cage, padded upper and heel logo, while adding revolutionary VaporMax Air technology to ramp up the comfort.`,
 		price: 200,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+		featured: false,
 	},
 	'air-zoom-superrep-premium-hiit-class': {
 		name: `Nike Air Zoom SuperRep`,
@@ -163,6 +181,7 @@ export const shoeData = {
 		description: `The Nike Air Zoom SuperRep is designed for circuit training, HIIT, short runs and other fast-paced exercise. Zoom Air cushioning in the forefoot combines with a wide, supportive heel to keep you moving and lifting comfortably.`,
 		price: 120,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'pagasus-trail-2-gore-tex': {
 		name: `Nike Pegasus Trail 2 GORE-TEX`,
@@ -171,6 +190,7 @@ export const shoeData = {
 		description: `Keep your wings moving in less than ideal weather. The Nike Pegasus Trail 2 GORE-TEX provides a waterproof design in extreme conditions for runners, trail athletes and outdoor enthusiasts. Versatile enough for everyday training, it features an ideal fit for multiple levels of experience.`,
 		price: 160,
 		images: ['01', '02', '03', '04', '05', '06', '07'],
+		featured: false,
 	},
 	'pagasus-trail-2': {
 		name: `Nike Pegasus Trail 2`,
@@ -179,6 +199,7 @@ export const shoeData = {
 		description: `Find your wings on the path less traveled. The Nike Pegasus Trail 2 delivers durability and responsiveness to runners, trail athletes and outdoor enthusiasts. Versatile enough for your everyday miles, it features an ideal fit with plush cushioning and tough traction.`,
 		price: 130,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08'],
+		featured: false,
 	},
 	'superrep-cycle-indoor': {
 		name: `Nike SuperRep Cycle`,
@@ -187,6 +208,7 @@ export const shoeData = {
 		description: `The Nike SuperRep Cycle brings a breathable design to the high-heat, fast-pace of indoor cycling. Adjustable straps secure your foot during intense movement as you push forward. Cleats are not included.`,
 		price: 120,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+		featured: false,
 	},
 	'wildhorse-6': {
 		name: `Nike Wildhorse 6`,
@@ -195,5 +217,6 @@ export const shoeData = {
 		description: `The Nike Wildhorse 6 keeps it stable, secure and lightweight on the trail. An updated outsole delivers the traction you need, while a foam mid-sole keeps you cushioned on your run.`,
 		price: 130,
 		images: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+		featured: true,
 	},
 };

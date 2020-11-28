@@ -1,11 +1,11 @@
 import './App.css';
-import Layout from './components/Layout';
+import Home from './components/Home';
 import {} from '@material-ui/core/colors';
 
 function App() {
 	return (
 		<div className="App">
-			<Layout />
+			<Home />
 		</div>
 	);
 }

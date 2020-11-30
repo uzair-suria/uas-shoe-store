@@ -8,17 +8,15 @@ import {
 	IconButton,
 	List,
 	ListItem,
-	ListItemIcon,
 	ListItemText,
 	makeStyles,
 	Toolbar,
 	Tooltip,
 	Typography,
 	useTheme,
+	Link as MuiLink,
 } from '@material-ui/core';
-import { green, purple } from '@material-ui/core/colors';
-import InboxIcon from '@material-ui/icons/Inbox';
-import MailIcon from '@material-ui/icons/Mail';
+import { red, teal } from '@material-ui/core/colors';
 import MenuIcon from '@material-ui/icons/Menu';
 import BrightnessHighIcon from '@material-ui/icons/BrightnessHigh';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
@@ -29,6 +27,13 @@ import {
 	ThemeProvider,
 } from '@material-ui/core/styles';
 import ProductCarousel from './ProductCarousel';
+import ProductList from './ProductList';
+import { Link, Route, Routes } from 'react-router-dom';
+import ProductDetails from './ProductDetails';
+import About from './About';
+import Contact from './Contact';
+import useWindowSize from '../hooks/useWindowSize';
+import { GitHub } from '@material-ui/icons';
 
 const drawerWidth = 240;
 
@@ -36,8 +41,8 @@ const darkTheme = responsiveFontSizes(
 	createMuiTheme({
 		palette: {
 			type: 'dark',
-			primary: { main: green[800] },
-			secondary: { main: purple[800] },
+			primary: { main: teal[500] },
+			secondary: { main: red['A200'] },
 		},
 	})
 );
@@ -46,8 +51,8 @@ const lightTheme = responsiveFontSizes(
 	createMuiTheme({
 		palette: {
 			type: 'light',
-			primary: { main: green[500] },
-			secondary: { main: purple[500] },
+			primary: { main: teal[500] },
+			secondary: { main: red['A200'] },
 		},
 	})
 );
@@ -89,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		padding: theme.spacing(3),
 	},
+	nestedList: {
+		paddingLeft: theme.spacing(2),
+	},
 }));
 
 const Home = (props) => {
@@ -97,6 +105,8 @@ const Home = (props) => {
 	const theme = useTheme();
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [darkMode, setDarkMode] = useState(false);
+	const [genderFilter, setGenderFilter] = useState(null);
+	const windowSize = useWindowSize();
 
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
@@ -106,40 +116,142 @@ const Home = (props) => {
 		<div>
 			<div className={classes.toolbar}>
 				<div className={classes.toolbarTitle}>
-					<Typography variant="h5" color="textSecondary" align="center">
-						Shoe Store
-					</Typography>
-					<Typography
-						variant="caption"
-						component="h6"
-						color="textSecondary"
-						align="right"
+					<Link
+						to="/"
+						style={{ textDecoration: 'none' }}
+						onClick={windowSize.width < 600 ? handleDrawerToggle : null}
 					>
-						Built by Uzair Suria
-					</Typography>
+						<Typography variant="h5" color="textSecondary" align="center">
+							Shoe Store
+						</Typography>
+						<Typography
+							variant="caption"
+							component="h6"
+							color="textSecondary"
+							align="right"
+						>
+							Built by Uzair Suria
+						</Typography>
+					</Link>
 				</div>
 			</div>
 			<Divider />
 			<List>
-				{['Inbox', 'Starred', 'Send Email', 'Drafts'].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
+				<Link to="/productList" style={{ textDecoration: 'none' }}>
+					<ListItem
+						button
+						onClick={() => {
+							setGenderFilter(null);
+							if (windowSize.width < 600) {
+								handleDrawerToggle();
+							}
+						}}
+					>
+						<ListItemText
+							primary={`All Products`}
+							primaryTypographyProps={{
+								variant: 'body1',
+								color: 'textPrimary',
+							}}
+						/>
 					</ListItem>
-				))}
+				</Link>
+				<Link to="/productList" style={{ textDecoration: 'none' }}>
+					<ListItem
+						button
+						onClick={() => {
+							setGenderFilter('male');
+							if (windowSize.width < 600) {
+								handleDrawerToggle();
+							}
+						}}
+					>
+						<ListItemText
+							primary={`Men's Shoes`}
+							className={classes.nestedList}
+							primaryTypographyProps={{
+								variant: 'body2',
+								color: 'textPrimary',
+							}}
+						/>
+					</ListItem>
+				</Link>
+				<Link to="/productList" style={{ textDecoration: 'none' }}>
+					<ListItem
+						button
+						onClick={() => {
+							setGenderFilter('female');
+							if (windowSize.width < 600) {
+								handleDrawerToggle();
+							}
+						}}
+					>
+						<ListItemText
+							primary={`Women's Shoes`}
+							className={classes.nestedList}
+							primaryTypographyProps={{
+								variant: 'body2',
+								color: 'textPrimary',
+							}}
+						/>
+					</ListItem>
+				</Link>
 			</List>
+
 			<Divider />
+
 			<List>
-				{['All Mail', 'Trash', 'Spam'].map((text, index) => (
-					<ListItem button key={text}>
-						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-						</ListItemIcon>
-						<ListItemText primary={text} />
+				<Link to="/about" style={{ textDecoration: 'none' }}>
+					<ListItem
+						button
+						onClick={() => {
+							setGenderFilter(null);
+							if (windowSize.width < 600) {
+								handleDrawerToggle();
+							}
+						}}
+					>
+						<ListItemText
+							primary={`About`}
+							primaryTypographyProps={{
+								variant: 'body1',
+								color: 'textPrimary',
+							}}
+						/>
 					</ListItem>
-				))}
+				</Link>
+				<Link to="/contact" style={{ textDecoration: 'none' }}>
+					<ListItem
+						button
+						onClick={() => {
+							setGenderFilter(null);
+							if (windowSize.width < 600) {
+								handleDrawerToggle();
+							}
+						}}
+					>
+						<ListItemText
+							primary={`Contact`}
+							primaryTypographyProps={{
+								variant: 'body1',
+								color: 'textPrimary',
+							}}
+						/>
+					</ListItem>
+				</Link>
+				<Divider />
+				<Typography variant="caption" color="textSecondary">
+					<div style={{ textAlign: 'center', marginTop: 20 }}>
+						<MuiLink
+							href="https://github.com/uzair-suria/uas-shoe-store"
+							color="textPrimary"
+						>
+							<Tooltip title="View Project Repository">
+								<GitHub fontSize="medium" />
+							</Tooltip>
+						</MuiLink>
+					</div>
+				</Typography>
 			</List>
 		</div>
 	);
@@ -163,21 +275,6 @@ const Home = (props) => {
 							<MenuIcon />
 						</IconButton>
 						<div className={classes.appBarNav}>
-							{/* <Tooltip title="View All Products">
-								<Button color="inherit" href="/ProductList">
-									Products
-								</Button>
-							</Tooltip>
-							<Tooltip title="About us">
-								<Button color="inherit" href="/About">
-									About
-								</Button>
-							</Tooltip>
-							<Tooltip title="Contact Info">
-								<Button color="inherit" href="/Contact">
-									Contact
-								</Button>
-							</Tooltip> */}
 							<Tooltip title="Toggle light/dark theme">
 								<IconButton
 									color="inherit"
@@ -224,7 +321,19 @@ const Home = (props) => {
 				</nav>
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
-					<ProductCarousel />
+					<Routes>
+						<Route path="/" element={<ProductCarousel />} />
+						<Route
+							path="/productList"
+							element={<ProductList productFilter={genderFilter} />}
+						/>
+						<Route path="productList/:productId" element={<ProductDetails />} />
+						{/* <Route path="/productDetails" element={<ProductDetails />}>
+							
+						</Route> */}
+						<Route path="/about" element={<About />} />
+						<Route path="/contact" element={<Contact />} />
+					</Routes>
 				</main>
 			</div>
 		</ThemeProvider>

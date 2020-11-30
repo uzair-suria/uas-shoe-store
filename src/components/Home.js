@@ -247,7 +247,7 @@ const Home = (props) => {
 							color="textPrimary"
 						>
 							<Tooltip title="View Project Repository">
-								<GitHub fontSize="medium" />
+								<GitHub />
 							</Tooltip>
 						</MuiLink>
 					</div>

@@ -7,11 +7,13 @@ import {
 	Typography,
 } from '@material-ui/core';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { shoeData } from '../data/shoeData';
 
 const useStyles = makeStyles({
 	root: {
-		maxWidth: 345,
+		maxWidth: 400,
+		margin: '0 auto',
 	},
 	price: {
 		marginTop: 20,
@@ -23,7 +25,7 @@ const ProductCard = ({ productId }) => {
 
 	const classes = useStyles();
 	return (
-		<div>
+		<Link to={`/productList/${productId}`} style={{ textDecoration: 'none' }}>
 			<Card className={classes.root}>
 				<CardActionArea>
 					<CardMedia
@@ -39,25 +41,25 @@ const ProductCard = ({ productId }) => {
 					<CardContent>
 						<Typography
 							gutterBottom
-							variant="h6"
-							component="h2"
+							variant="button"
+							component="h3"
 							color="textPrimary"
 						>
 							{shoe.name}
 						</Typography>
-						<Typography variant="body1" color="textSecondary" component="p">
+						<Typography variant="body2" color="textSecondary" component="p">
 							{shoe.gender === 'male' ? `Men's` : `Women's`} Shoe
 						</Typography>
-						<Typography variant="body2" color="textSecondary" component="p">
-							{shoe.tagline}
-						</Typography>
+						{/* <Typography variant="caption" color="textSecondary">
+						{shoe.tagline}
+					</Typography> */}
 						<Typography align="right" className={classes.price}>
 							${shoe.price}
 						</Typography>
 					</CardContent>
 				</CardActionArea>
 			</Card>
-		</div>
+		</Link>
 	);
 };
 

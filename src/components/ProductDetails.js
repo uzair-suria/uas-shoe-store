@@ -107,10 +107,7 @@ const ProductDetails = () => {
 									{shoeData[productId].images.map((i) => (
 										<Grid item xs={12} md={6} key={i}>
 											<img
-												src={
-													require(`../images/${shoeData[productId].gender}/${productId}/${i}.jpg`)
-														.default
-												}
+												src={`${process.env.PUBLIC_URL}/images/${shoeData[productId].gender}/${productId}/${i}.jpg`}
 												alt={`${shoeData[productId].name} view ${i}`}
 												className={classes.image}
 											/>

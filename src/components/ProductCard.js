@@ -32,10 +32,7 @@ const ProductCard = ({ productId }) => {
 						component="img"
 						alt={productId}
 						height="240"
-						src={
-							require(`%PUBLIC_URL%/images/${shoeData[productId].gender}/${productId}/01.jpg`)
-								.default
-						}
+						src={`${process.env.PUBLIC_URL}/images/${shoeData[productId].gender}/${productId}/01.jpg`}
 						title={shoe.tagline}
 					/>
 					<CardContent>

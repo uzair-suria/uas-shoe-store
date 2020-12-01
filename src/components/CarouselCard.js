@@ -36,10 +36,7 @@ const CarouselCard = ({ productId }) => {
 						component="img"
 						alt={productId}
 						height={windowSize.width ? windowSize.width * 0.45 : ''}
-						src={
-							require(`%PUBLIC_URL%/images/${shoeData[productId].gender}/${productId}/01.jpg`)
-								.default
-						}
+						src={`${process.env.PUBLIC_URL}/images/${shoeData[productId].gender}/${productId}/01.jpg`}
 						title={shoe.tagline}
 						style={{
 							overflow: 'hidden',

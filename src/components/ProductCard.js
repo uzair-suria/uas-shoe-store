@@ -33,7 +33,7 @@ const ProductCard = ({ productId }) => {
 						alt={productId}
 						height="240"
 						src={
-							require(`../images/${shoeData[productId].gender}/${productId}/01.jpg`)
+							require(`%PUBLIC_URL%/images/${shoeData[productId].gender}/${productId}/01.jpg`)
 								.default
 						}
 						title={shoe.tagline}
